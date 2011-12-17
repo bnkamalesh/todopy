@@ -1,0 +1,21 @@
+{% if todo_list %}
+{% for item in todo_list %}
+	<div class="event {{ item.status }}" id="{{ item.id }}">
+		<a href="" class="event_drop" rel="{{ item.id }}">x</a>
+		<div class="clear"> </div>
+		
+		<h2 class="event_title">{{ item.title }}</h2>
+		<p class="event_description">{{ item.description }}</p>
+		
+		<p class="options">
+			{% if item.done == 1 %}
+				<span class="event_status">Done</span>
+			{% else %}
+				<a href="#" class="event_change_status" rel="{{ item.id }}">Mark as done &#x2713;</a>
+			{% endif %}
+		</p>
+	</div>
+{% endfor %}
+{% else %}
+	<h2>You don't have any tasks yet.</h2>
+{% endif %}
