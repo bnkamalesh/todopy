@@ -48,4 +48,3 @@ def ajax(request):
 	})
 
 	return HttpResponse(t.render(c))
-

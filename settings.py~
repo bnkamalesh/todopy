@@ -124,6 +124,7 @@ INSTALLED_APPS = (
 #The following 2 lines are required for the 'registration' module
 ACCOUNT_ACTIVATION_DAYS = 7
 LOGIN_REDIRECT_URL = '/home'
+LOGOUT_REDIRECT_URL = '/index'
 
 
 # A sample logging configuration. The only tangible logging

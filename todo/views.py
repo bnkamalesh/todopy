@@ -12,7 +12,7 @@ def index(request):
 def home(request):
 	# no one is logged in
 	if request.user.is_authenticated() == False:
-		return HttpResponse('You must to be <a href="accounts/login">log in</a>')
+		return HttpResponse('You must be logged in <a href="accounts/login">log in</a>')
 	
 	t = loader.get_template('home.html')
 	c = Context({
@@ -22,7 +22,7 @@ def home(request):
 def ajax(request):
 	# no one is logged in
 	if request.user.is_authenticated() == False:
-		return HttpResponse('You must to be <a href="accounts/login">log in</a>')
+		return HttpResponse('You must be logged in <a href="accounts/login">log in</a>')
 
 	# delete a todo
 	if request.GET.has_key('delete_id'):
