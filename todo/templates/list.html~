@@ -1,6 +1,6 @@
 {% if todo_list %}
 {% for item in todo_list %}
-	<div class="event {{ item.status }}" id="{{ item.id }}">
+	<div class="event done{{ item.status }}" id="{{ item.id }}">
 		<a href="" class="event_drop" rel="{{ item.id }}">x</a>
 		<div class="clear"> </div>
 		
